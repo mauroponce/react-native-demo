@@ -8,7 +8,16 @@ import {
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
-    title: 'Welcome to the app!',
+    title: 'Home',
+    drawerLabel: 'Go to Home',
+    /*
+    drawerIcon: ({ tintColor }) => (
+      <Image
+        source={require('./home-icon.png')}
+        style={[styles.icon, { tintColor: tintColor }]}
+      />
+    )
+    */
   };
 
   render() {
@@ -16,6 +25,7 @@ export default class HomeScreen extends React.Component {
       <View style={styles.container}>
         <Button title="Show me more of the app" onPress={this._showMoreApp} />
         <Button title="Actually, sign me out :)" onPress={this._signOutAsync} />
+        <Button title="Open Drawer" onPress={this.props.navigation.openDrawer} />
       </View>
     );
   }

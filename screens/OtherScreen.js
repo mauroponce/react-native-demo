@@ -9,7 +9,16 @@ import {
 
 export default class OtherScreen extends React.Component {
   static navigationOptions = {
-    title: 'Lots of features here',
+    title: 'Other Screen',
+    drawerLabel: 'Go to Other',
+    /*
+    drawerIcon: ({ tintColor }) => (
+      <Image
+        source={require('./home-icon.png')}
+        style={[styles.icon, { tintColor: tintColor }]}
+      />
+    )
+    */
   };
 
   render() {
